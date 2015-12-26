@@ -1,0 +1,24 @@
+class Solution(object):
+    def reverse(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        converted = False
+        overflowLimit = 2**31
+        output = 0
+
+        if x < 0:
+            x = -1 * x
+            converted = True
+            
+        while x > 0:
+            rem = x % 10
+            x = int(x / 10)
+            output = output * 10 + rem
+        
+        if output > overflowLimit:
+            return 0
+        if converted:
+            output = -1 * output
+        return output
