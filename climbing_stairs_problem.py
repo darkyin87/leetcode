@@ -17,6 +17,8 @@ def climb_stairs(n):
 
     return steps[n-1]
         
-climb_stairs(1)
-climb_stairs(1)
-climb_stairs(1)
+print climb_stairs(1)
+print climb_stairs(2)
+print climb_stairs(3)
+print climb_stairs(5)
+print climb_stairs(8)
